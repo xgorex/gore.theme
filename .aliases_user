@@ -1,0 +1,11 @@
+
+
+alias v="vim"
+alias vo="vim -O"
+alias vd="vimdiff"
+
+alias ls="ls --color=auto"
+alias ll="ls -la"
+alias lll="ls -l"
+
+alias grep='grep --color=auto'
