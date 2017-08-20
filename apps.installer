@@ -12,6 +12,7 @@ gimp
 smbclient
 banshee
 ffmpeg
+libavcodec-extra
 
 python-xdg
 radiotray
