@@ -14,7 +14,7 @@ if [ -f ~/.aliases_user ]; then
    . ~/.aliases_user
 fi
 
-export cad="/opt/common/cad"
-export inst="/opt/common/install"
-export proj="/opt/projects"
+#export cad="/opt/common/cad"
+#export inst="/opt/common/install"
+#export proj="/opt/projects"
 
