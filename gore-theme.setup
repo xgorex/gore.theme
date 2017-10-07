@@ -1,0 +1,22 @@
+#!/bin/bash
+
+xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /home/gore/Pictures/wallpapers/destination_4k.jpg
+
+xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-filesystem --set false
+xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-home --set false
+xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-removable --set true
+xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-trash --set false
+xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super>s --set "xfce4-popup-whiskermenu"
+
+xfconf-query --channel xfce4-notifyd --property /theme --set "Greybird"
+
+xfconf-query --channel xfwm4 --property /general/button_layout --set "CMH|O"
+xfconf-query --channel xfwm4 --property /general/theme --set "Arc-Dark"
+xfconf-query --channel xfwm4 --property /general/title_alignment --set "left"
+xfconf-query --channel xfwm4 --property /general/title_font --set "Titillium Web Semi-Bold 10"
+
+xfconf-query --channel xsettings --property /Gtk/CursorThemeName --set "DMZ-Black"
+xfconf-query --channel xsettings --property /Gtk/CursorThemeSize --set 24
+xfconf-query --channel xsettings --property /Gtk/FontName --set "Titillium Web 10"
+xfconf-query --channel xsettings --property /Net/IconThemeName --set "Gore"
+xfconf-query --channel xsettings --property /Net/ThemeName --set "Greybird"

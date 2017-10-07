@@ -3,12 +3,15 @@
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install -y build-essential vlc goldendict vim dkms
+sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse 
 sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd gstreamer1.0-dvswitch gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi 
-sudo apt install -y libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
+sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
 sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious
 
 sudo apt install -y python-xdg radiotray
+sudo apt install -y gperf autoconf flex bison
+sudo apt install -y handbrake ogmrip
+sudo apt install -y scratch gnome-twitch
 
 #wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 #echo deb http://download.virtualbox.org/virtualbox/debian xenial contrib | sudo tee /etc/apt/sources.list.d/virtualbox.list
@@ -25,9 +28,9 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt-get update
 sudo apt-get install -y spotify-client
 
-wget -nv https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_16.10/Release.key -O Release.key
-sudo apt-key add - < Release.key
-rm Release.key
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/doublecmd-gtk.list"
-sudo apt-get update
-sudo apt-get install -y doublecmd-gtk
+#wget -nv https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_16.10/Release.key -O Release.key
+#sudo apt-key add - < Release.key
+#rm Release.key
+#sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/doublecmd-gtk.list"
+#sudo apt-get update
+#sudo apt-get install -y doublecmd-gtk
