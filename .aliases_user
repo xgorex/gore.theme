@@ -13,3 +13,7 @@ alias grep='grep --color=auto'
 alias xgapt-install='sudo apt-get install '
 alias xgapt-search='sudo apt-cache search '
 alias xgapt-remove='sudo apt-get purge '
+
+#check battery
+alias battcheck='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+
