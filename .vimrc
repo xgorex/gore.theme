@@ -1,10 +1,18 @@
 
 set t_Co=256
-set expandtab
-set tabstop=3
-set shiftwidth=3
-set number
 
+colorscheme gore 
+set number
+set hlsearch
+set shiftwidth=3
+set tabstop=3
+set expandtab
+set smartindent
+set ruler
+set nowrap
+set cursorline
+syntax on
+filetype plugin indent on
 
 "AIRLINE BEGIN
 "To have nice view status bar: airline; you have to
@@ -28,6 +36,4 @@ let g:airline_powerline_fonts = 1
 nmap <F8> :TagbarToggle<CR>
 "TAGBAR END
 
-syntax on
-filetype plugin indent on
 
