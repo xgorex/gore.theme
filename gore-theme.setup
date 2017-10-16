@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /usr/share/xfce4/backdrops/destination_4k.jpg
+xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /usr/share/xfce4/backdrops/4428920-sunset-wallpapers.jpg
 
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-filesystem --set false
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-home --set false
