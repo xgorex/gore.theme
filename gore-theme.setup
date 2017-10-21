@@ -1,11 +1,20 @@
 #!/bin/bash
 
-xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /usr/share/xfce4/backdrops/4428920-sunset-wallpapers.jpg
+if [ -f /usr/share/xfce4/backdrops/4428920-sunset-wallpapers.jpg ];then
+   xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /usr/share/xfce4/backdrops/4428920-sunset-wallpapers.jpg
+else
+   echo "E@ [theme] Targeted wallpaper does not exixsts."   
+fi   
 
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-filesystem --set false
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-home --set false
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-removable --set true
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-trash --set false
+
+if [ ! `xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>s` == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /commands/custom/\<Super\>s --type string --set "xfce4-popup-whiskermenu"
+   #xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>s -r
+fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>s --set "xfce4-popup-whiskermenu"
 
 xfconf-query --channel xfce4-notifyd --property /theme --set "Greybird"
