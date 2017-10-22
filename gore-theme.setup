@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f /usr/share/xfce4/backdrops/4428920-sunset-wallpapers.jpg ];then
-   xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /usr/share/xfce4/backdrops/4428920-sunset-wallpapers.jpg
+if [ -f /usr/share/xfce4/backdrops/destination_4k.jpg ];then
+   xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /usr/share/xfce4/backdrops/destination_4k.jpg
 else
    echo "E@ [theme] Targeted wallpaper does not exixsts."   
 fi   

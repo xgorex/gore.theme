@@ -11,10 +11,12 @@ sudo apt install -y exuberant-ctags
 
 sudo apt install -y python-xdg radiotray
 sudo apt install -y gperf autoconf flex bison
-sudo apt install -y handbrake ogmrip
+sudo apt install -y handbrake ogmrip openshot
 sudo apt install -y scratch gnome-twitch
 
 sudo apt install -y lightdm-gtk-greeter
+
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 
 #wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 #echo deb http://download.virtualbox.org/virtualbox/debian xenial contrib | sudo tee /etc/apt/sources.list.d/virtualbox.list
