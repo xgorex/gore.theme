@@ -1,0 +1,11 @@
+
+
+#After you downloaded and installed Lightworks 14.0.0
+#Patch installation with followings:
+
+wget http://mirrors.kernel.org/ubuntu/pool/main/p/portaudio19/libportaudio2_19+svn20140130-1.1_amd64.deb
+wget http://mirrors.kernel.org/ubuntu/pool/main/p/portaudio19/libportaudiocpp0_19+svn20140130-1.1_amd64.deb
+dpkg-deb -x libportaudio2_19+svn20140130-1.1_amd64.deb .
+dpkg-deb -x libportaudiocpp0_19+svn20140130-1.1_amd64.deb . 
+
+sudo cp usr/lib/x86_64-linux-gnu/* /usr/lib/lightworks/
