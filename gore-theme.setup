@@ -11,9 +11,9 @@ xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-h
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-removable --set true
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-trash --set false
 
-if [ `xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>s` == "" ];then
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>s`
+if [ "$run" == "" ];then
    xfconf-query --channel xfce4-keyboard-shortcuts --create --property /commands/custom/\<Super\>s --type string --set "xfce4-popup-whiskermenu"
-   #xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>s -r
 fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>s --set "xfce4-popup-whiskermenu"
 
