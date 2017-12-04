@@ -18,6 +18,8 @@ sudo apt install -y lightdm-gtk-greeter
 
 sudo apt install -y shotwell sweethome3d
 
+#power settings
+sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms 
 
 
 #Youtube downloader
