@@ -4,10 +4,10 @@ sudo apt update
 sudo apt upgrade -y
 
 sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse
-sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd gstreamer1.0-dvswitch gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
 sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious evolution telegram-desktop gnote
-sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted
+sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted gnome-disk-utility baobab
 
 sudo apt install -y python-xdg radiotray
 sudo apt install -y gperf autoconf flex bison
@@ -47,7 +47,7 @@ sudo apt-get install -y spotify-client
 
 
 ### Postponned installations #####################################
-#sudo apt install -y digikam scratch
+#sudo apt install -y digikam scratch gstreamer1.0-dvswitch
 
 
 #wget -nv https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_16.10/Release.key -O Release.key
