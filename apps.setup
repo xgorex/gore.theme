@@ -11,7 +11,7 @@ sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full
 
 sudo apt install -y python-xdg radiotray
 sudo apt install -y gperf autoconf flex bison
-sudo apt install -y handbrake ogmrip openshot
+sudo apt install -y handbrake ogmrip 
 sudo apt install -y gnome-twitch octave
 
 sudo apt install -y lightdm-gtk-greeter
