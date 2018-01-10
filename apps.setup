@@ -6,7 +6,7 @@ sudo apt upgrade -y
 sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse
 sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
-sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious evolution telegram-desktop gnote
+sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious telegram-desktop gnote evolution openvpn network-manager-openvpn-gnome resolvconf
 sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted gnome-disk-utility baobab
 
 sudo apt install -y python-xdg radiotray
@@ -16,7 +16,13 @@ sudo apt install -y gnome-twitch octave
 
 sudo apt install -y lightdm-gtk-greeter
 
-sudo apt install -y shotwell sweethome3d
+sudo apt install -y shotwell banshee
+
+sudo apt install -y xfce4-weather-plugin xfce4-clipman-plugin
+
+sudo apt-add-repository -y ppa:remmina-ppa-team/remmina-next
+sudo apt-get update
+sudo apt-get install remmina remmina-plugin-rdp remmina-plugin-secret libfreerdp-plugins-standard
 
 #power settings
 sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms 
@@ -26,7 +32,8 @@ sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms
 sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 
 #Atom 1.21.1
-wget https://github.com/atom/atom/releases/download/v1.21.1/atom-amd64.deb
+#wget https://github.com/atom/atom/releases/download/v1.21.1/atom-amd64.deb
+wget https://github.com/atom/atom/releases/download/v1.23.1/atom-amd64.deb
 sudo dpkg -i atom-amd64.deb
 rm atom-amd64.deb
 
@@ -37,10 +44,12 @@ sudo apt update
 sudo apt install -y virtualbox-5.2
 ##VBoxManage list extpacks
 #wget http://download.virtualbox.org/virtualbox/5.1.26/Oracle_VM_VirtualBox_Extension_Pack-5.1.26-117224.vbox-extpack
-wget http://download.virtualbox.org/virtualbox/5.2.2/Oracle_VM_VirtualBox_Extension_Pack-5.2.2-119230.vbox-extpack
+#wget http://download.virtualbox.org/virtualbox/5.2.2/Oracle_VM_VirtualBox_Extension_Pack-5.2.2-119230.vbox-extpack
+wget http://download.virtualbox.org/virtualbox/5.2.4/Oracle_VM_VirtualBox_Extension_Pack-5.2.4-119785.vbox-extpack
 #sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.1.26-117224.vbox-extpack
-sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.2.2-119230.vbox-extpack
-rm Oracle_VM_VirtualBox_Extension_Pack-5.2.2-119230.vbox-extpack
+#sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.2.2-119230.vbox-extpack
+sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.2.4-119785.vbox-extpack
+rm Oracle_VM_VirtualBox_Extension_Pack-5.2.4-119785.vbox-extpack
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -48,8 +57,14 @@ sudo apt-get update
 sudo apt-get install -y spotify-client
 
 
+### Interactive installations ####################################
+sudo apt install -y libdvd-pkg
+sudo dpkg-reconfigure libdvd-pkg
+
+
+
 ### Postponned installations #####################################
-#sudo apt install -y digikam scratch gstreamer1.0-dvswitch
+#sudo apt install -y digikam scratch gstreamer1.0-dvswitch sweethome3d evolution
 
 
 #wget -nv https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_16.10/Release.key -O Release.key
