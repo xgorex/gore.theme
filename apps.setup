@@ -29,7 +29,7 @@ sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms
 
 
 #Youtube downloader
-sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+#sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 sudo echo deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bionic contrib | sudo tee /etc/apt/sources.list.d/virtualbox-bionic.list
@@ -41,6 +41,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB31
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update
 sudo apt-get install -y spotify-client
+
+sudo apt install -y gnome-control-center gnome-online-accounts gnome-calendar gnome-contacts
 
 
 ### Interactive installations ####################################
