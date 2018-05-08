@@ -17,3 +17,4 @@ alias xgapt-remove='sudo apt-get purge '
 #check battery
 alias battcheck='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 
+alias gnome-control-center="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
