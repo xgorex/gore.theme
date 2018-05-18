@@ -17,6 +17,24 @@ if [ "$run" == "" ];then
 fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>s --set "xfce4-popup-whiskermenu"
 
+xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>f --set "catfish"
+xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>e --set "nautilus"
+
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>d`
+if [ "$run" == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Super\>d --type string --set "show_desktop_key"
+fi
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Super\>d --set "show_desktop_key"
+
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Alt\>d`
+if [ "$run" == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Alt\>d --type string --set "hide_window_key"
+fi
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Alt\>d --set "hide_window_key"
+
+
+
+
 xfconf-query --channel xfce4-notifyd --property /theme --set "Greybird"
 
 xfconf-query --channel xfwm4 --property /general/button_layout --set "CMH|O"
