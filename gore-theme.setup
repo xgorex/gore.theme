@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if [ -f /usr/share/xfce4/backdrops/destination_4k.jpg ];then
-   xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /usr/share/xfce4/backdrops/destination_4k.jpg
+if [ -f $HOME/Pictures/wallpapers/13678.jpg ];then
+   xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set $HOME/Pictures/wallpapers/13678.jpg
 else
-   echo "E@ [theme] Targeted wallpaper does not exixsts."   
+   echo "E@ [theme] Targeted wallpaper does not exixsts."  
+	sleep 5 
 fi   
 
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-filesystem --set false
@@ -33,8 +34,6 @@ fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Alt\>d --set "hide_window_key"
 
 
-
-
 xfconf-query --channel xfce4-notifyd --property /theme --set "Greybird"
 
 xfconf-query --channel xfwm4 --property /general/button_layout --set "CMH|O"
@@ -46,4 +45,4 @@ xfconf-query --channel xsettings --property /Gtk/CursorThemeName --set "DMZ-Blac
 xfconf-query --channel xsettings --property /Gtk/CursorThemeSize --set 24
 xfconf-query --channel xsettings --property /Gtk/FontName --set "Titillium Web 10"
 xfconf-query --channel xsettings --property /Net/IconThemeName --set "Gore"
-xfconf-query --channel xsettings --property /Net/ThemeName --set "Greybird"
+xfconf-query --channel xsettings --property /Net/ThemeName --set "Greybird_gore"
