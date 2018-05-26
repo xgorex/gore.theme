@@ -6,7 +6,7 @@ sudo apt upgrade -y
 sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse
 sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
-sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious telegram-desktop gnote openvpn network-manager-openvpn-gnome resolvconf evince
+sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious telegram-desktop gnote openvpn network-manager-openvpn-gnome resolvconf evince evolution banshee
 sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted baobab
 
 sudo apt install -y python-xdg radiotray
@@ -23,7 +23,7 @@ sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms
 
 sudo apt install -y docky
 
-sudo apt install -y gnome-control-center gnome-online-accounts gnome-calendar gnome-contacts gnome-twitch
+sudo apt install -y gnome-twitch
 
 #Youtube downloader
 #sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
@@ -51,6 +51,8 @@ sudo dpkg-reconfigure libdvd-pkg
 
 
 ### Postponned installations #####################################
+#sudo apt install -y gnome-control-center gnome-online-accounts gnome-calendar gnome-contacts gnome-twitch
+
 #sudo apt install -y digikam scratch gstreamer1.0-dvswitch sweethome3d evolution banshee
 
 #sudo apt-add-repository -y ppa:remmina-ppa-team/remmina-next
