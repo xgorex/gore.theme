@@ -21,17 +21,51 @@ xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Su
 xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>f --set "catfish"
 xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>e --set "nautilus"
 
+### General: show desktop
 run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>d`
 if [ "$run" == "" ];then
    xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Super\>d --type string --set "show_desktop_key"
 fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Super\>d --set "show_desktop_key"
 
+### Window behavior: minimaze an acrive window
 run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Alt\>d`
 if [ "$run" == "" ];then
    xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Alt\>d --type string --set "hide_window_key"
 fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Alt\>d --set "hide_window_key"
+
+### Window behavior: maximize + tile right + tile left
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>Up`
+if [ "$run" == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Super\>Up --type string --set "maximize_window_key"
+fi
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Super\>Up --set "maximize_window_key"
+
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>Right`
+if [ "$run" == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Super\>Right --type string --set "tile_right_key"
+fi
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Super\>Right --set "tile_right_key"
+
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>Left`
+if [ "$run" == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Super\>Left --type string --set "tile_left_key"
+fi
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Super\>Left --set "tile_left_key"
+
+### Window behvior: move to next and previous workspace
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom --list|grep \<Primary\>\<Super\>Right`
+if [ "$run" == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Primary\>\<Super\>Right --type string --set "move_window_next_workspace_key"
+fi
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Primary\>\<Super\>Right --set "move_window_next_workspace_key"
+
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom --list|grep \<Primary\>\<Super\>Left`
+if [ "$run" == "" ];then
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Primary\>\<Super\>Left --type string --set "move_window_prev_workspace_key"
+fi
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Primary\>\<Super\>Left --set "move_window_prev_workspace_key"
 
 
 xfconf-query --channel xfce4-notifyd --property /theme --set "Greybird"
