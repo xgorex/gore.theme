@@ -3,8 +3,10 @@
 sudo apt update
 sudo apt upgrade -y
 
+sudo apt purge thunderbird ristretto atril
+
 sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse
-sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi easytag guvcview simplescreenrecorder
 sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
 sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious telegram-desktop gnote openvpn network-manager-openvpn-gnome resolvconf evince evolution
 sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted baobab
