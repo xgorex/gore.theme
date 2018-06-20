@@ -19,7 +19,7 @@ fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>s --set "xfce4-popup-whiskermenu"
 
 xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>f --set "catfish"
-xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>e --set "nautilus"
+xfconf-query --channel xfce4-keyboard-shortcuts --property /commands/custom/\<Super\>e --set "exo-open --launch FileManager"
 
 ### General: show desktop
 run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>d`
@@ -29,11 +29,11 @@ fi
 xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Super\>d --set "show_desktop_key"
 
 ### Window behavior: minimaze an acrive window
-run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Alt\>d`
+run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Alt\>x
 if [ "$run" == "" ];then
-   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Alt\>d --type string --set "hide_window_key"
+   xfconf-query --channel xfce4-keyboard-shortcuts --create --property /xfwm4/custom/\<Alt\>x --type string --set "hide_window_key"
 fi
-xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Alt\>d --set "hide_window_key"
+xfconf-query --channel xfce4-keyboard-shortcuts --property /xfwm4/custom/\<Alt\>x --set "hide_window_key"
 
 ### Window behavior: maximize + tile right + tile left
 run=`xfconf-query --channel xfce4-keyboard-shortcuts --list|grep \<Super\>Up`

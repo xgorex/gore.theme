@@ -6,7 +6,7 @@ sudo apt upgrade -y
 sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse
 sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
-sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious telegram-desktop gnote openvpn network-manager-openvpn-gnome resolvconf evince evolution banshee
+sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra audacious telegram-desktop gnote openvpn network-manager-openvpn-gnome resolvconf evince evolution
 sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted baobab
 
 sudo apt install -y python-xdg radiotray
@@ -21,18 +21,14 @@ sudo apt install -y xfce4-weather-plugin xfce4-clipman-plugin
 #power settings
 sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms 
 
-sudo apt install -y docky
-
-sudo apt install -y gnome-twitch
-
-#Youtube downloader
-#sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo apt install -y gnome-control-center gnome-online-accounts gnome-twitch
+sudo apt install -y eog eog-plugin-disable-dark-theme eog-plugin-exif-display
 
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 sudo echo deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bionic contrib | sudo tee /etc/apt/sources.list.d/virtualbox-bionic.list
 sudo apt update
 sudo apt install -y virtualbox-5.2
-#sudo apt install -y virtualbox-ext-pack
+sudo apt install -y virtualbox-ext-pack
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -51,6 +47,11 @@ sudo dpkg-reconfigure libdvd-pkg
 
 
 ### Postponned installations #####################################
+#sudo apt install -y docky
+
+#Youtube downloader
+#sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+
 #sudo apt install -y gnome-control-center gnome-online-accounts gnome-calendar gnome-contacts gnome-twitch
 
 #sudo apt install -y digikam scratch gstreamer1.0-dvswitch sweethome3d evolution banshee
