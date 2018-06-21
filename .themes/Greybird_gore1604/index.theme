@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Greybird_gore1604
+Comment=Greybird theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Greybird_gore1604
+MetacityTheme=Greybird_gore1604
+IconTheme=elementary-xfce-dark
+CursorTheme=DMZ-White
+ButtonLayout=:minimize,maximize,close
