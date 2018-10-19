@@ -1,0 +1,38 @@
+#!/bin/bash
+
+declare -a mountDevice=( '/dev/mmcblk0p1' '/home/gore/.local/mnt/sd/gore.hd' '/dev/mapper/gore.hd' '/home/gore/.local/mnt/sd/gore.hdsec' '/dev/mapper/gore.hdsec' )
+declare -a mountPoint=( '/home/gore/.local/mnt/sd' 'gore.hd' '/home/gore/.local/mnt/gore.hd' 'gore.hdsec' '/home/gore/.local/mnt/gore.hdsec')
+declare -a mountFSType=( 'ext4' 'luks' 'ext4' 'luks' 'ext4')
+
+index=0
+
+for item in "${mountPoint[@]}"; do
+   #echo "Device:"${mountDevice[$index]}
+   #echo "FSType:"${mountFSType[$index]}
+   #echo "Point :"${mountPoint[$index]}
+
+   testMount=`mount | grep ${item}`
+
+   if [ "luks" ==  ${mountFSType[$index]}  ]; then
+      testMount=`sudo cryptsetup status ${mountPoint[$index]} |grep -w active`
+      if [ "" == "$testMount" ]; then
+         echo "Mapping encrypted [$item]"
+         sudo cryptsetup luksOpen ${mountDevice[$index]} $item
+         index=`expr $index + 1`  
+         continue
+      else
+         echo "[$item] already mapped."
+         index=`expr $index + 1`  
+         continue
+      fi
+   fi
+
+   if [ "" ==  "$testMount"  ];then
+      echo "Mounting [$item]"
+      sudo mount ${mountDevice[$index]} -t ${mountFSType[$index]} $item 
+   else
+      echo "[$item] already mounted."
+   fi
+
+   index=`expr $index + 1`  
+done
