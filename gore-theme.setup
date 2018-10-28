@@ -21,8 +21,9 @@ xfconf-query --channel xfwm4 --property /general/title_font --set "Titillium Web
 xfconf-query --channel xsettings --property /Gtk/CursorThemeName --set "DMZ-Black"
 xfconf-query --channel xsettings --property /Gtk/CursorThemeSize --set 24
 xfconf-query --channel xsettings --property /Gtk/FontName --set "Titillium Web 10"
-xfconf-query --channel xsettings --property /Net/IconThemeName --set "Gore"
+xfconf-query --channel xsettings --property /Net/IconThemeName --set "Gore_2"
 xfconf-query --channel xsettings --property /Net/ThemeName --set "Greybird_gore"
+xfconf-query --channel xsettings --property /Gtk/CursorThemeName --set "capitaine-cursors"
 
 
 ### Shortcuts for XFCE [working]
