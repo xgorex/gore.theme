@@ -1,0 +1,99 @@
+[GORE Desktop]
+Type=G+
+Default		= Window(size=1120x820) VPRight(size=200-550) HPmain(size=400)
+VolumeScroll	= VBplayer
+DefaultFocus	= Play
+Name		= _"GORE Desktop"
+
+VBmain		= HBmenu _HPmain Progress
+ HBmenu		= _MBmenu
+  MBmenu	= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem
+ HPmain		= VBLeft _TBRight
+  VBLeft	= 5VBplayer _TabbedLists(group=1,pages="+PlayList +QueueList +@song_info +PictureBrowser")
+   VBplayer	= HBButtons3 HBText_Cover
+    HBButtons3	= 5Sort 5Filter 5Queue 5Pos -Stars
+    HBText_Cover= _VBText 5-Cover
+     VBText	= HBButtons1 2HBTitle 2HBArtist 2HBAlbum HBTime
+      HBButtons1= Prev Stop Play Next ExtraButtons 5-VolumeIcon -Pref -OpenBrowser(toggle)
+      HBTitle	= LockSong _Title LabelsIcons
+      HBArtist	= LockArtist _Artist
+      HBAlbum	= LockAlbum _Album -Year
+      HBTime	= Time _TimeBar
+  TBRight	= _"Library" VPRight _"Context" Context
+   VPRight	= HPfp0 _VBSongList
+    HPfp0	= FilterPane0(nb=1,hidebb=1,page=album_artist,hidetabs=1) HPfp1
+     HPfp1	= FilterPane2(nb=3,hidebb=1,page=album,page_album/lpicsize=32,page_album/lmarkup=1,page_album/mmarkup=below,page_album/mode=mosaic ,hidetabs=1)
+    VBSongList	= HBSongList _SongList
+     HBSongList	= SimpleSearch(maxwidth=250) -FilterLock -PlayFilter -Refresh -ResetFilter -MBlist
+      MBlist 	= HistItem LSortItem PlayItem
+
+
+
+[Playlist]
+Type=G+
+Name		= _"Playlist"
+Default		= Window(size=1120x820) HPfp0(size=140-140) HPfp_list(size=780-300)
+HBIndic		= MBmenu Sort 10Filter Queue 10Pos
+MBmenu		= MainMenuItem LayoutItem PSortItem PFilterItem QueueItem HistItem PlayItem
+VBleft		= HBIndic _HBButtons
+HBButtons	= Prev Play Next Time 5_ABtimebar
+ABtimebar	= (yscale=0) TimeBar
+HBupper		= VBleft 5Cover 5_VBright -VBVol
+VBVol		= VolumeIcon _VolumeBar(vertical=1)
+HBTitle		= Filler0 _Title -Stars
+HBArtist	= LockArtist _Artist
+HBAlbum		= LockAlbum _Album -Year
+VBright		= 2_HBTitle 2_HBArtist 2_HBAlbum
+VBmain		= HBupper 5_HPfp_list Progress
+HPfp_list	= _PlayList HPfp0
+HPfp0		= FilterPane0(nb=1,hidebb=1,page=artists,page_artists/lmarkup=1) FilterPane1(nb=2,hidebb=1,page=album,page_album/lpicsize=32,page_album/lmarkup=1)
+HSize0		= Filler0 LockArtist LockAlbum
+VSize1		= 50 VolumeSlider
+VolumeScroll	= HBupper
+
+
+
+# layouts used internally
+[Volume]
+VSize= 100 VolumeSlider
+VBox = Volume(xalign=.5) _VolumeSlider(vertical=1)
+
+[Equalizer]
+Window		= size=300x160,uniqueid=Equalizer,ifexist=replace
+VBmain		= 2EqualizerPresets _Equalizer
+Title		= _"Equalizer"
+
+[Progress]
+VBmain		= _VProgress(lastclose=1)
+Title		= _"Progress"
+
+[Karaoke]
+Type= K
+VBmain= PluginKaraoke
+Window= pos=50%x100%,size=80%x1,insensitive=1,nodecoration=1,ontop=1
+
+[Context]
+Type=C
+Title=		_"Context"
+Default		= Window(size=500x300)
+VBmain		= _Context
+
+[Queue]
+Type=Q
+Title=_"Queue Edit"
+Window		= size=500x300,uniqueid=Equalizer,ifexist=replace
+VBmain		= 3_QueueList(activate=play) HBButtons
+HBButtons	= EditListButtons 4QueueActions
+
+[EditList]
+Title=List Edit
+Default		= Window(size=500x300)
+VBmain		= 3_SongList(mode=editlist,activate=playlist) EditListButtons
+
+#used by the "view in new window" of the PictureBrowser
+[PictureBrowser]
+Title=_"Picture Browser"
+Default		= Window(size=600x400)
+VBmain		= _PictureBrowser
+KeyBindings     = q CloseWindow
+
