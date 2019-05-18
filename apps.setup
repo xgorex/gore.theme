@@ -6,14 +6,14 @@ sudo apt upgrade -y
 sudo apt purge -y thunderbird
 
 sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse cmake
-sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi easytag guvcview simplescreenrecorder
+sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi easytag simplescreenrecorder
 sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
-sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra gnote openvpn network-manager-openvpn-gnome resolvconf evolution cryptsetup
-sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted baobab
+sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra openvpn network-manager-openvpn-gnome resolvconf evolution cryptsetup preload
+sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted baobab 
 
 sudo apt install -y python-xdg radiotray
 sudo apt install -y gperf autoconf flex bison
-sudo apt install -y handbrake shotwell obs-studio gmusicbrowser
+sudo apt install -y handbrake obs-studio gmusicbrowser
 sudo apt install -y octave
 
 sudo apt install -y ntp ntpstat iftop iotop
@@ -25,25 +25,27 @@ sudo apt install -y xfce4-weather-plugin xfce4-clipman-plugin
 #power settings
 sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms 
 
-sudo apt install -y gnome-control-center gnome-online-accounts gnome-twitch
-sudo apt install -y eog eog-plugin-disable-dark-theme eog-plugin-exif-display
+#sudo apt install -y gnome-control-center gnome-online-accounts gnome-twitch
+#sudo apt install -y eog eog-plugin-disable-dark-theme eog-plugin-exif-display
 
+DISTRO=`cat /etc/lsb-release |grep CODENAME |awk -F= '{print $2}'`
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-sudo echo deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bionic contrib | sudo tee /etc/apt/sources.list.d/virtualbox-bionic.list
+sudo echo deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian ${DISTRO} contrib | sudo tee /etc/apt/sources.list.d/virtualbox-${DISTRO}.list
 sudo apt update
-sudo apt install -y virtualbox-5.2
+sudo apt install -y virtualbox-6.0
 sudo apt install -y virtualbox-ext-pack
+
+sudo snap install discord
+sudo snap install spotify
 
 #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 #echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 #sudo apt-get update
 #sudo apt-get install -y spotify-client
 
-
-
 ### Interactive installations ####################################
-sudo apt install -y libdvd-pkg
-sudo dpkg-reconfigure libdvd-pkg
+#sudo apt install -y libdvd-pkg
+#sudo dpkg-reconfigure libdvd-pkg
 
 
 

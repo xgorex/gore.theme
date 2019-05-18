@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ -f $HOME/Pictures/wallpapers/13678.jpg ];then
-   xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set $HOME/Pictures/wallpapers/13678.jpg
-else
-   echo "E@ [theme] Targeted wallpaper does not exixsts."  
-	sleep 5 
-fi   
+#if [ -f $HOME/Pictures/wallpapers/13678.jpg ];then
+#   xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set $HOME/Pictures/wallpapers/13678.jpg
+#else
+#   echo "E@ [theme] Targeted wallpaper does not exixsts."  
+#	sleep 5 
+#fi   
 
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-filesystem --set false
 xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-home --set false
