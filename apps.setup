@@ -1,42 +1,45 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt purge -y thunderbird
+sudo apt purge -y thunderbird unattended-upgrades
 
 sudo apt install -y build-essential vlc goldendict vim dkms cifs-utils exfat-fuse cmake
-sudo apt install -y gstreamer1.0-clutter gstreamer1.0-crystalhd  gstreamer1.0-fluendo-mp3 gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi easytag simplescreenrecorder
-sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr
-sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra openvpn network-manager-openvpn-gnome resolvconf evolution cryptsetup preload
-sudo apt install -y exuberant-ctags redshift redshift-gtk meld mtools p7zip-full gparted baobab 
+sudo apt install -y gstreamer1.0-crystalhd gstreamer1.0-libav  gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-bad-faad gstreamer1.0-plugins-bad-videoparsers gstreamer1.0-plugins-ugly gstreamer1.0-vaapi easytag simplescreenrecorder
+sudo apt install -y libreoffice-impress libreoffice-draw libreoffice-style-breeze libreoffice-style-tango libreoffice-style-human libreoffice-style-sifr libreoffice-kde5 libreoffice-l10n-pl libreoffice-writer libreoffice-writer2latex libreoffice-calc
+sudo apt install -y calibre gimp smbclient ffmpeg libavcodec-extra cryptsetup preload
+sudo apt install -y exuberant-ctags mtools p7zip-full aspell-pl net-tools network-manager-openvpn
+sudo apt install -y ktorrent kamera kaddressbook akonadi-contacts korganizer
+sudo apt install -y gperf autoconf flex bison python3-venv
+sudo apt install -y obs-studio inkscape inkscape-open-symbols cantata mpd  #pulseeffects
+sudo apt install -y steam
+sudo apt install -y ntp ntpstat iftop iotop lshw
 
-sudo apt install -y python-xdg radiotray
-sudo apt install -y gperf autoconf flex bison
-sudo apt install -y handbrake obs-studio gmusicbrowser
-sudo apt install -y octave
 
-sudo apt install -y ntp ntpstat iftop iotop
 
-sudo apt install -y lightdm-gtk-greeter
 
-sudo apt install -y xfce4-weather-plugin xfce4-clipman-plugin
+sudo apt install -y virtualbox virtualbox-qt virtualbox-dkms virtualbox-guest-additions-iso virtualbox-ext-pack
+
+#Youtube downloader
+#check does the file exist
+#curl -I https://yt-dl.org/downloads/latest/youtube-dl
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+
+exit
+    
+
+
+
+#extra apps
+sudo apt install -y handbrake 
+
 
 #power settings
-sudo apt install -y tlp tp-smapi-dkms acpi-call-dkms 
 
 #sudo apt install -y gnome-control-center gnome-online-accounts gnome-twitch
 #sudo apt install -y eog eog-plugin-disable-dark-theme eog-plugin-exif-display
 
-DISTRO=`cat /etc/lsb-release |grep CODENAME |awk -F= '{print $2}'`
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-sudo echo deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian ${DISTRO} contrib | sudo tee /etc/apt/sources.list.d/virtualbox-${DISTRO}.list
-sudo apt update
-sudo apt install -y virtualbox-6.0
-sudo apt install -y virtualbox-ext-pack
-
-sudo snap install discord
-sudo snap install spotify
 
 #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 #echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -54,9 +57,6 @@ sudo snap install spotify
 
 ### Postponned installations #####################################
 #sudo apt install -y docky
-
-#Youtube downloader
-#sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 
 #sudo apt install -y gnome-control-center gnome-online-accounts gnome-calendar gnome-contacts gnome-twitch
 
