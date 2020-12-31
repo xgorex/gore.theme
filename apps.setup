@@ -14,7 +14,7 @@ sudo apt install -y ktorrent kamera kaddressbook akonadi-contacts korganizer
 sudo apt install -y gperf autoconf flex bison python3-venv
 sudo apt install -y obs-studio inkscape inkscape-open-symbols cantata mpd  #pulseeffects
 sudo apt install -y steam
-sudo apt install -y ntp ntpstat iftop iotop lshw
+sudo apt install -y ntp ntpstat iftop iotop lshw smartmontools
 
 
 
